@@ -3,9 +3,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <title>Happy Teachers' Day 🌸</title>
 
@@ -424,15 +422,20 @@ button:active {
         );
 
     color: #423246;
+
+    justify-content: center;
 }
+
+
+/* PAGE 2 TITLE */
 
 .page-title {
 
     font-family: 'Playfair Display', serif;
 
-    font-size: 32px;
+    font-size: 30px;
 
-    margin-bottom: 8px;
+    margin-bottom: 5px;
 }
 
 .page-subtitle {
@@ -441,11 +444,11 @@ button:active {
 
     color: #887589;
 
-    margin-bottom: 25px;
+    margin-bottom: 18px;
 }
 
 
-/* GLASS CARD */
+/* PAGE 2 GLASS CARD - REDUCED HEIGHT */
 
 .glass-card {
 
@@ -453,7 +456,7 @@ button:active {
 
     max-width: 390px;
 
-    padding: 32px 25px;
+    padding: 22px 25px;
 
     border-radius: 30px;
 
@@ -476,25 +479,25 @@ button:active {
 
 .card-icon {
 
-    font-size: 55px;
+    font-size: 45px;
 
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .glass-card h2 {
 
     font-family: 'Playfair Display', serif;
 
-    font-size: 26px;
+    font-size: 23px;
 
-    margin-bottom: 18px;
+    margin-bottom: 12px;
 }
 
 .glass-card p {
 
-    font-size: 14px;
+    font-size: 13px;
 
-    line-height: 1.8;
+    line-height: 1.65;
 
     color: #6d5d70;
 }
@@ -504,9 +507,9 @@ button:active {
 
 .continue-button {
 
-    margin-top: 25px;
+    margin-top: 18px;
 
-    padding: 16px 34px;
+    padding: 15px 34px;
 
     border-radius: 50px;
 
@@ -528,6 +531,18 @@ button:active {
 
         0 10px 25px
         rgba(130,75,136,0.3);
+}
+
+
+/* PAGE 2 BUTTON - MOVED UP */
+
+#screen2 .continue-button {
+
+    margin-top: 15px;
+
+    position: relative;
+
+    top: -8px;
 }
 
 
@@ -780,7 +795,7 @@ button:active {
 
 
 /* ===============================
-   MUSIC BADGE
+   MUSIC STATUS
 ================================ */
 
 .music-status {
@@ -816,7 +831,7 @@ button:active {
 
 
 /* ===============================
-   DOTS
+   PAGE DOTS
 ================================ */
 
 .dots {
@@ -866,7 +881,7 @@ button:active {
 
 
 /* ===============================
-   SMALL MOBILE DEVICES
+   SMALL MOBILE SCREENS
 ================================ */
 
 @media (max-height: 700px) {
@@ -895,6 +910,10 @@ button:active {
         margin-top: 25px;
     }
 
+    #screen2 {
+        transform: scale(0.95);
+    }
+
 }
 
 </style>
@@ -905,20 +924,14 @@ button:active {
 
 <!-- ===============================
      BACKGROUND MUSIC
-
-     FILE NAME: song.mp3
-
-     Keep song.mp3 in same folder
-     as index.html
+     FILE: song.mp3
 ================================ -->
 
 <audio id="bgMusic" loop>
     <source src="song.mp3" type="audio/mpeg">
 </audio>
 
-<!-- ===============================
-     FLOATING FLOWERS
-================================ -->
+<!-- FLOATING FLOWERS -->
 
 <div class="flowers">
 
@@ -940,12 +953,8 @@ button:active {
 ```
 <!-- MUSIC STATUS -->
 
-<div
-    class="music-status"
-    id="musicStatus">
-
+<div class="music-status" id="musicStatus">
     🎵 Playing
-
 </div>
 
 
@@ -954,38 +963,24 @@ button:active {
      PAGE 1
 ================================ -->
 
-<section
-    class="screen active"
-    id="screen1">
-
+<section class="screen active" id="screen1">
 
     <div class="circle one"></div>
     <div class="circle two"></div>
 
-
-    <div class="butterfly left">
-        🦋
-    </div>
-
-    <div class="butterfly right">
-        🦋
-    </div>
+    <div class="butterfly left">🦋</div>
+    <div class="butterfly right">🦋</div>
 
 
     <div class="welcome-content">
 
-
         <div class="small-heading">
-
             A SPECIAL MESSAGE FROM YOUR STUDENTS
-
         </div>
 
 
         <div class="main-icon">
-
             🎓
-
         </div>
 
 
@@ -996,9 +991,7 @@ button:active {
             <br>
 
             <span class="special">
-
                 Teachers'
-
             </span>
 
             Day 🌸
@@ -1017,8 +1010,6 @@ button:active {
         </p>
 
 
-        <!-- START SONG -->
-
         <button
             class="start-button"
             onclick="startWebsite()">
@@ -1026,7 +1017,6 @@ button:active {
             Tap to Begin ✨
 
         </button>
-
 
     </div>
 
@@ -1040,7 +1030,6 @@ button:active {
 
     </div>
 
-
 </section>
 
 
@@ -1049,22 +1038,16 @@ button:active {
      PAGE 2
 ================================ -->
 
-<section
-    class="screen"
-    id="screen2">
+<section class="screen" id="screen2">
 
 
     <h1 class="page-title">
-
         More Than Lessons 📚
-
     </h1>
 
 
     <p class="page-subtitle">
-
         Some things stay with us forever.
-
     </p>
 
 
@@ -1072,16 +1055,12 @@ button:active {
 
 
         <div class="card-icon">
-
             🌟
-
         </div>
 
 
         <h2>
-
             The Things We Remember
-
         </h2>
 
 
@@ -1107,6 +1086,8 @@ button:active {
 
     </div>
 
+
+    <!-- BUTTON MOVED UP -->
 
     <button
         class="continue-button"
@@ -1135,18 +1116,14 @@ button:active {
      PAGE 3
 ================================ -->
 
-<section
-    class="screen"
-    id="screen3">
+<section class="screen" id="screen3">
 
 
     <div class="letter">
 
 
         <h2>
-
             Dear Teachers, ❤️
-
         </h2>
 
 
@@ -1217,8 +1194,6 @@ button:active {
     </div>
 
 
-    <!-- NEXT TO FINAL PAGE -->
-
     <button
         class="continue-button"
         onclick="goToThankYou()">
@@ -1247,25 +1222,19 @@ button:active {
      FINAL THANK YOU
 ================================ -->
 
-<section
-    class="screen"
-    id="screen4">
+<section class="screen" id="screen4">
 
 
     <div class="thank-content">
 
 
         <div class="thank-flower">
-
             🌸
-
         </div>
 
 
         <div class="thank-small">
-
             WITH LOVE & GRATITUDE
-
         </div>
 
 
@@ -1276,9 +1245,7 @@ button:active {
             <br>
 
             <span>
-
                 YOU
-
             </span>
 
         </h1>
@@ -1300,23 +1267,17 @@ button:active {
 
 
         <div class="heart">
-
             ❤️
-
         </div>
 
 
         <div class="final-wish">
-
             Happy Teachers' Day 🌸
-
         </div>
 
 
         <div class="final-sign">
-
             — With Love, Your Students 🎓
-
         </div>
 
 
@@ -1338,125 +1299,91 @@ button:active {
 
 </div>
 
-<!-- ===============================
-     JAVASCRIPT
-================================ -->
-
 <script>
 
 
-/* START WEBSITE + SONG */
+/* ===============================
+   START WEBSITE + MUSIC
+================================ */
 
 function startWebsite() {
 
     const song =
-
-        document.getElementById(
-
-            "bgMusic"
-
-        );
+        document.getElementById("bgMusic");
 
 
     song.play()
-
         .then(() => {
 
             document
-
-                .getElementById(
-
-                    "musicStatus"
-
-                )
-
+                .getElementById("musicStatus")
                 .classList
-
                 .add("show");
 
         })
-
         .catch(error => {
 
             console.log(
-
                 "Audio Error:",
-
                 error
-
             );
 
         });
 
 
     changeScreen(
-
         "screen1",
-
         "screen2"
-
     );
 
 }
 
 
-/* PAGE 2 → PAGE 3 */
+/* ===============================
+   PAGE 2 → PAGE 3
+================================ */
 
 function goToPage3() {
 
     changeScreen(
-
         "screen2",
-
         "screen3"
-
     );
 
 }
 
 
-/* PAGE 3 → THANK YOU */
+/* ===============================
+   PAGE 3 → PAGE 4
+================================ */
 
 function goToThankYou() {
 
     changeScreen(
-
         "screen3",
-
         "screen4"
-
     );
 
 }
 
 
-/* SCREEN CHANGE */
+/* ===============================
+   CHANGE SCREEN
+================================ */
 
-function changeScreen(
-
-    current,
-
-    next
-
-) {
+function changeScreen(current, next) {
 
     document
-
         .getElementById(current)
-
         .classList
-
         .remove("active");
 
 
     setTimeout(() => {
 
         document
-
             .getElementById(next)
-
             .classList
-
             .add("active");
 
     }, 150);
