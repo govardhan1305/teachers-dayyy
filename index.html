@@ -7,318 +7,203 @@
 <meta name="viewport"
 content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<title>Happy Teachers' Day ❤️</title>
+<title>Happy Teachers' Day 🌸</title>
 
 <style>
 
-/* ==========================================
-   IMPORT FONTS
-========================================== */
+/* ===============================
+   GOOGLE FONTS
+================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
 
 
-/* ==========================================
+/* ===============================
    BASIC SETTINGS
-========================================== */
+================================ */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
     -webkit-tap-highlight-color: transparent;
 }
 
 html,
 body {
-
     width: 100%;
     height: 100%;
-
     overflow: hidden;
-
     font-family: 'Poppins', sans-serif;
-
 }
 
 
-/* ==========================================
-   MAIN MOBILE APP
-========================================== */
+/* ===============================
+   APP
+================================ */
 
 .app {
-
     width: 100%;
-
     height: 100vh;
     height: 100dvh;
-
     position: relative;
-
     overflow: hidden;
-
 }
 
 
-/* ==========================================
-   FLOATING FLOWERS BACKGROUND
-========================================== */
+/* ===============================
+   FLOATING FLOWERS
+================================ */
 
 .flowers {
-
     position: fixed;
-
     inset: 0;
-
     pointer-events: none;
-
     overflow: hidden;
-
-    z-index: 50;
-
+    z-index: 100;
 }
-
 
 .flower {
-
     position: absolute;
-
     bottom: -100px;
-
-    animation:
-
-        flowerFloat
-
-        linear
-
-        infinite;
-
     opacity: 0.8;
-
+    animation: flowerFloat linear infinite;
 }
-
 
 .flower:nth-child(1) {
-
     left: 3%;
-
-    font-size: 25px;
-
+    font-size: 24px;
     animation-duration: 12s;
-
 }
-
 
 .flower:nth-child(2) {
-
     left: 15%;
-
     font-size: 20px;
-
-    animation-duration: 16s;
-
+    animation-duration: 17s;
     animation-delay: -5s;
-
 }
-
 
 .flower:nth-child(3) {
-
     left: 28%;
-
     font-size: 30px;
-
     animation-duration: 14s;
-
-    animation-delay: -8s;
-
+    animation-delay: -9s;
 }
-
 
 .flower:nth-child(4) {
-
     left: 42%;
-
-    font-size: 22px;
-
+    font-size: 20px;
     animation-duration: 18s;
-
-    animation-delay: -2s;
-
+    animation-delay: -3s;
 }
-
 
 .flower:nth-child(5) {
-
-    left: 58%;
-
+    left: 57%;
     font-size: 28px;
-
     animation-duration: 13s;
-
-    animation-delay: -9s;
-
+    animation-delay: -7s;
 }
-
 
 .flower:nth-child(6) {
-
-    left: 72%;
-
-    font-size: 20px;
-
-    animation-duration: 17s;
-
-    animation-delay: -4s;
-
+    left: 70%;
+    font-size: 22px;
+    animation-duration: 16s;
+    animation-delay: -10s;
 }
-
 
 .flower:nth-child(7) {
-
-    left: 88%;
-
+    left: 85%;
     font-size: 30px;
-
     animation-duration: 15s;
-
-    animation-delay: -7s;
-
+    animation-delay: -4s;
 }
-
 
 .flower:nth-child(8) {
-
     left: 96%;
-
-    font-size: 22px;
-
+    font-size: 20px;
     animation-duration: 19s;
-
-    animation-delay: -10s;
-
+    animation-delay: -12s;
 }
-
 
 @keyframes flowerFloat {
 
     0% {
-
-        transform:
-
-            translateY(0)
-
-            rotate(0deg);
-
+        transform: translateY(0) rotate(0deg);
         opacity: 0;
-
     }
-
 
     10% {
-
         opacity: 0.8;
-
     }
 
-
     100% {
-
-        transform:
-
-            translateY(-120vh)
-
-            rotate(360deg);
-
+        transform: translateY(-120vh) rotate(360deg);
         opacity: 0;
-
     }
 
 }
 
 
-/* ==========================================
+/* ===============================
    SCREEN SYSTEM
-========================================== */
+================================ */
 
 .screen {
-
     position: absolute;
-
     inset: 0;
-
-    width: 100%;
-
-    height: 100%;
-
-    padding:
-
-        25px
-
-        20px;
 
     display: none;
 
     flex-direction: column;
-
     justify-content: center;
-
     align-items: center;
 
     text-align: center;
 
+    padding: 25px 20px;
+
     overflow: hidden;
-
 }
-
 
 .screen.active {
-
     display: flex;
-
-    animation:
-
-        pageEnter
-
-        0.8s
-
-        ease
-
-        forwards;
-
+    animation: pageEnter 0.8s ease forwards;
 }
-
 
 @keyframes pageEnter {
 
     from {
-
         opacity: 0;
-
-        transform:
-
-            translateX(50px);
-
+        transform: translateX(40px);
     }
 
-
     to {
-
         opacity: 1;
-
-        transform:
-
-            translateX(0);
-
+        transform: translateX(0);
     }
 
 }
 
 
-/* ==========================================
-   SCREEN 1
-========================================== */
+/* ===============================
+   COMMON BUTTONS
+================================ */
+
+button {
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+button:active {
+    transform: scale(0.94);
+}
+
+
+/* ===============================
+   PAGE 1
+================================ */
 
 #screen1 {
 
@@ -327,517 +212,228 @@ body {
     background:
 
         radial-gradient(
-
             circle at 10% 10%,
-
-            rgba(255, 180, 210, 0.45),
-
+            rgba(255, 180, 210, 0.5),
             transparent 35%
-
         ),
 
         radial-gradient(
-
             circle at 90% 20%,
-
-            rgba(184, 150, 255, 0.5),
-
+            rgba(190, 150, 255, 0.5),
             transparent 35%
-
         ),
 
         linear-gradient(
-
             135deg,
-
             #321943,
-
             #713d73,
-
             #c46488
-
         );
-
 }
 
 
-/* ==========================================
-   DECORATION CIRCLES
-========================================== */
+/* DECORATION */
 
 .circle {
-
     position: absolute;
-
     border-radius: 50%;
-
-    background:
-
-        rgba(
-
-            255,
-
-            255,
-
-            255,
-
-            0.08
-
-        );
-
+    background: rgba(255,255,255,0.08);
 }
-
 
 .circle.one {
-
-    width: 250px;
-
-    height: 250px;
-
-    top: -100px;
-
-    left: -100px;
-
+    width: 280px;
+    height: 280px;
+    top: -130px;
+    left: -130px;
 }
-
 
 .circle.two {
-
-    width: 300px;
-
-    height: 300px;
-
-    bottom: -150px;
-
-    right: -150px;
-
+    width: 320px;
+    height: 320px;
+    bottom: -170px;
+    right: -170px;
 }
 
 
-/* ==========================================
-   BUTTERFLIES
-========================================== */
+/* BUTTERFLIES */
 
 .butterfly {
-
     position: absolute;
-
     font-size: 26px;
-
-    animation:
-
-        butterflyMove
-
-        5s
-
-        ease-in-out
-
-        infinite;
-
+    animation: butterflyMove 5s ease-in-out infinite;
 }
-
 
 .butterfly.left {
-
     left: 8%;
-
-    top: 15%;
-
+    top: 16%;
 }
-
 
 .butterfly.right {
-
     right: 8%;
-
     bottom: 20%;
-
     animation-delay: -2s;
-
 }
-
 
 @keyframes butterflyMove {
 
     0%,
-
     100% {
-
-        transform:
-
-            translate(0, 0)
-
-            rotate(-10deg);
-
+        transform: translate(0,0) rotate(-10deg);
     }
-
 
     50% {
-
-        transform:
-
-            translate(25px, -20px)
-
-            rotate(10deg);
-
+        transform: translate(25px,-20px) rotate(10deg);
     }
 
 }
 
 
-/* ==========================================
-   WELCOME CONTENT
-========================================== */
+/* PAGE 1 CONTENT */
 
 .welcome-content {
-
     position: relative;
-
     z-index: 10;
-
     width: 100%;
-
 }
-
 
 .small-heading {
-
     font-size: 10px;
-
-    text-transform: uppercase;
-
     letter-spacing: 4px;
-
-    opacity: 0.8;
-
     margin-bottom: 25px;
-
+    opacity: 0.85;
 }
-
 
 .main-icon {
-
-    font-size: 75px;
-
+    font-size: 78px;
     margin-bottom: 15px;
-
-    animation:
-
-        iconFloat
-
-        3s
-
-        ease-in-out
-
-        infinite;
-
+    animation: iconFloat 3s ease-in-out infinite;
 }
-
 
 @keyframes iconFloat {
 
     0%,
-
     100% {
-
-        transform:
-
-            translateY(0)
-
-            rotate(-3deg);
-
+        transform: translateY(0) rotate(-3deg);
     }
 
-
     50% {
-
-        transform:
-
-            translateY(-15px)
-
-            rotate(3deg);
-
+        transform: translateY(-15px) rotate(3deg);
     }
 
 }
-
 
 .main-title {
 
-    font-family:
+    font-family: 'Playfair Display', serif;
 
-        'Playfair Display',
-
-        serif;
-
-    font-size:
-
-        clamp(
-
-            45px,
-
-            13vw,
-
-            62px
-
-        );
+    font-size: clamp(45px, 13vw, 65px);
 
     line-height: 1.05;
-
 }
 
+.special {
 
-.main-title .special {
-
-    font-family:
-
-        'Dancing Script',
-
-        cursive;
-
-    color: #ffe5a5;
+    font-family: 'Dancing Script', cursive;
 
     font-size: 1.25em;
 
+    color: #ffe5a5;
 }
-
 
 .welcome-text {
 
     max-width: 340px;
 
-    margin:
-
-        25px
-
-        auto;
-
-    line-height: 1.8;
+    margin: 25px auto;
 
     font-size: 14px;
 
-    opacity: 0.9;
+    line-height: 1.8;
 
+    opacity: 0.92;
 }
 
 
-/* ==========================================
-   START BUTTON
-========================================== */
+/* START BUTTON */
 
 .start-button {
 
-    border: none;
+    padding: 17px 38px;
 
     border-radius: 50px;
-
-    padding:
-
-        17px
-
-        35px;
 
     background:
 
         linear-gradient(
-
             135deg,
-
             #ffffff,
-
-            #ffe9f0
-
+            #ffe8ef
         );
 
     color: #713d73;
-
-    font-family:
-
-        'Poppins',
-
-        sans-serif;
 
     font-size: 15px;
 
     font-weight: 600;
 
-    cursor: pointer;
-
     box-shadow:
 
-        0
+        0 10px 35px
+        rgba(0,0,0,0.3);
 
-        10px
-
-        35px
-
-        rgba(
-
-            0,
-
-            0,
-
-            0,
-
-            0.3
-
-        );
-
-    animation:
-
-        buttonGlow
-
-        2s
-
-        infinite;
-
+    animation: buttonGlow 2s infinite;
 }
-
-
-.start-button:active {
-
-    transform:
-
-        scale(0.93);
-
-}
-
 
 @keyframes buttonGlow {
 
     0%,
-
     100% {
 
         box-shadow:
 
-            0
+            0 10px 35px rgba(0,0,0,0.3),
 
-            10px
-
-            35px
-
-            rgba(
-
-                0,
-
-                0,
-
-                0,
-
-                0.3
-
-            ),
-
-            0
-
-            0
-
-            0
-
-            0
-
-            rgba(
-
-                255,
-
-                255,
-
-                255,
-
-                0.5
-
-            );
-
+            0 0 0 0 rgba(255,255,255,0.5);
     }
-
 
     50% {
 
         box-shadow:
 
-            0
+            0 10px 35px rgba(0,0,0,0.3),
 
-            10px
-
-            35px
-
-            rgba(
-
-                0,
-
-                0,
-
-                0,
-
-                0.3
-
-            ),
-
-            0
-
-            0
-
-            0
-
-            18px
-
-            rgba(
-
-                255,
-
-                255,
-
-                255,
-
-                0
-
-            );
-
+            0 0 0 18px rgba(255,255,255,0);
     }
 
 }
 
 
-/* ==========================================
-   SCREEN 2
-========================================== */
+/* ===============================
+   PAGE 2
+================================ */
 
 #screen2 {
 
     background:
 
         linear-gradient(
-
             160deg,
-
             #fff0f5,
-
             #f3e8ff,
-
             #eaf3ff
-
         );
 
     color: #423246;
-
 }
-
 
 .page-title {
 
-    font-family:
-
-        'Playfair Display',
-
-        serif;
+    font-family: 'Playfair Display', serif;
 
     font-size: 32px;
 
     margin-bottom: 8px;
-
 }
-
 
 .page-subtitle {
 
@@ -846,13 +442,10 @@ body {
     color: #887589;
 
     margin-bottom: 25px;
-
 }
 
 
-/* ==========================================
-   GLASS CARD
-========================================== */
+/* GLASS CARD */
 
 .glass-card {
 
@@ -860,96 +453,42 @@ body {
 
     max-width: 390px;
 
-    padding:
-
-        35px
-
-        25px;
+    padding: 32px 25px;
 
     border-radius: 30px;
 
     background:
 
-        rgba(
+        rgba(255,255,255,0.72);
 
-            255,
-
-            255,
-
-            255,
-
-            0.72
-
-        );
-
-    backdrop-filter:
-
-        blur(15px);
+    backdrop-filter: blur(15px);
 
     box-shadow:
 
-        0
-
-        15px
-
-        45px
-
-        rgba(
-
-            90,
-
-            60,
-
-            100,
-
-            0.15
-
-        );
+        0 15px 45px
+        rgba(90,60,100,0.15);
 
     border:
 
-        1px
-
-        solid
-
-        rgba(
-
-            255,
-
-            255,
-
-            255,
-
-            0.8
-
-        );
-
+        1px solid
+        rgba(255,255,255,0.8);
 }
-
 
 .card-icon {
 
-    font-size: 58px;
+    font-size: 55px;
 
-    margin-bottom: 18px;
-
+    margin-bottom: 15px;
 }
-
 
 .glass-card h2 {
 
-    font-family:
-
-        'Playfair Display',
-
-        serif;
+    font-family: 'Playfair Display', serif;
 
     font-size: 26px;
 
     margin-bottom: 18px;
-
 }
-
 
 .glass-card p {
 
@@ -958,34 +497,25 @@ body {
     line-height: 1.8;
 
     color: #6d5d70;
-
 }
 
 
+/* CONTINUE BUTTON */
+
 .continue-button {
 
-    margin-top: 28px;
+    margin-top: 25px;
 
-    border: none;
+    padding: 16px 34px;
 
     border-radius: 50px;
-
-    padding:
-
-        16px
-
-        32px;
 
     background:
 
         linear-gradient(
-
             135deg,
-
             #824b88,
-
             #d36d93
-
         );
 
     color: white;
@@ -994,65 +524,36 @@ body {
 
     font-weight: 600;
 
-    cursor: pointer;
-
     box-shadow:
 
-        0
-
-        10px
-
-        25px
-
-        rgba(
-
-            130,
-
-            75,
-
-            136,
-
-            0.3
-
-        );
-
+        0 10px 25px
+        rgba(130,75,136,0.3);
 }
 
 
-/* ==========================================
-   SCREEN 3
-========================================== */
+/* ===============================
+   PAGE 3
+================================ */
 
 #screen3 {
 
     background:
 
         radial-gradient(
-
             circle at top,
-
             #ffd8e5,
-
             transparent 40%
-
         ),
 
         linear-gradient(
-
             160deg,
-
             #fff8ef,
-
             #f7e5d3
-
         );
-
 }
 
 
-/* ==========================================
-   LETTER
-========================================== */
+/* LETTER */
 
 .letter {
 
@@ -1060,71 +561,34 @@ body {
 
     max-width: 420px;
 
-    max-height: 75vh;
+    max-height: 68vh;
 
     overflow-y: auto;
 
-    padding:
-
-        30px
-
-        23px;
+    padding: 28px 23px;
 
     border-radius: 25px;
 
     background:
 
-        rgba(
-
-            255,
-
-            255,
-
-            255,
-
-            0.85
-
-        );
+        rgba(255,255,255,0.88);
 
     box-shadow:
 
-        0
-
-        20px
-
-        60px
-
-        rgba(
-
-            90,
-
-            50,
-
-            70,
-
-            0.15
-
-        );
-
+        0 20px 60px
+        rgba(90,50,70,0.15);
 }
-
 
 .letter h2 {
 
-    font-family:
-
-        'Dancing Script',
-
-        cursive;
+    font-family: 'Dancing Script', cursive;
 
     font-size: 38px;
 
     color: #a85275;
 
     margin-bottom: 20px;
-
 }
-
 
 .letter p {
 
@@ -1135,40 +599,191 @@ body {
     margin-bottom: 15px;
 
     color: #67535e;
-
 }
-
 
 .final-text {
 
-    font-family:
+    font-family: 'Playfair Display', serif;
 
-        'Playfair Display',
+    color: #a85275 !important;
 
-        serif;
-
-    color:
-
-        #a85275
-
-        !important;
-
-    font-size:
-
-        18px
-
-        !important;
+    font-size: 18px !important;
 
     font-weight: 600;
+}
+
+
+/* ===============================
+   PAGE 4 - THANK YOU
+================================ */
+
+#screen4 {
+
+    color: white;
+
+    background:
+
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(255,190,215,0.6),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 80% 80%,
+            rgba(190,160,255,0.5),
+            transparent 40%
+        ),
+
+        linear-gradient(
+            135deg,
+            #43204f,
+            #914b7a,
+            #e17d9f
+        );
+}
+
+
+.thank-content {
+
+    width: 100%;
+
+    animation:
+
+        thankAppear
+        1.2s
+        ease
+        forwards;
+}
+
+@keyframes thankAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform: scale(0.7);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: scale(1);
+    }
 
 }
 
 
-/* ==========================================
-   MUSIC BADGE
-========================================== */
+.thank-flower {
 
-.music {
+    font-size: 70px;
+
+    margin-bottom: 15px;
+
+    animation: iconFloat 3s infinite;
+}
+
+
+.thank-small {
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+
+    opacity: 0.8;
+}
+
+
+.thank-title {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(70px, 21vw, 110px);
+
+    line-height: 0.8;
+
+    text-shadow:
+
+        0 10px 40px
+        rgba(0,0,0,0.3);
+}
+
+
+.thank-title span {
+
+    font-family: 'Dancing Script', cursive;
+
+    font-size: 1.3em;
+
+    color: #ffe4a3;
+}
+
+
+.thank-message {
+
+    margin-top: 40px;
+
+    font-size: 15px;
+
+    line-height: 2;
+
+    opacity: 0.92;
+}
+
+
+.heart {
+
+    font-size: 45px;
+
+    margin: 25px 0 15px;
+
+    animation: heartBeat 1.5s infinite;
+}
+
+@keyframes heartBeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.25);
+    }
+
+}
+
+
+.final-wish {
+
+    font-family: 'Dancing Script', cursive;
+
+    font-size: 30px;
+
+    color: #ffe4a3;
+
+    margin-top: 10px;
+}
+
+
+.final-sign {
+
+    margin-top: 18px;
+
+    font-size: 13px;
+
+    opacity: 0.85;
+}
+
+
+/* ===============================
+   MUSIC BADGE
+================================ */
+
+.music-status {
 
     position: absolute;
 
@@ -1176,66 +791,44 @@ body {
 
     right: 18px;
 
-    z-index: 100;
+    z-index: 150;
 
-    padding:
-
-        8px
-
-        13px;
+    padding: 8px 13px;
 
     border-radius: 50px;
 
     background:
 
-        rgba(
+        rgba(255,255,255,0.5);
 
-            255,
-
-            255,
-
-            255,
-
-            0.5
-
-        );
-
-    backdrop-filter:
-
-        blur(10px);
+    backdrop-filter: blur(10px);
 
     font-size: 12px;
 
     color: #754b70;
 
     display: none;
-
 }
 
-
-.music.show {
-
+.music-status.show {
     display: block;
-
 }
 
 
-/* ==========================================
-   PAGE DOTS
-========================================== */
+/* ===============================
+   DOTS
+================================ */
 
 .dots {
 
     position: absolute;
 
-    bottom: 22px;
+    bottom: 20px;
 
     display: flex;
 
     gap: 8px;
-
 }
-
 
 .dot {
 
@@ -1247,95 +840,59 @@ body {
 
     background:
 
-        rgba(
-
-            255,
-
-            255,
-
-            255,
-
-            0.5
-
-        );
-
+        rgba(255,255,255,0.5);
 }
-
 
 .dot.active {
 
     width: 24px;
 
     background: white;
-
 }
 
-
 #screen2 .dot,
-
 #screen3 .dot {
 
     background:
 
-        rgba(
-
-            100,
-
-            60,
-
-            100,
-
-            0.25
-
-        );
-
+        rgba(100,60,100,0.25);
 }
 
-
 #screen2 .dot.active,
-
 #screen3 .dot.active {
 
     background: #a85275;
-
 }
 
 
-/* ==========================================
-   SMALL MOBILE SCREENS
-========================================== */
+/* ===============================
+   SMALL MOBILE DEVICES
+================================ */
 
 @media (max-height: 700px) {
 
     .main-icon {
-
         font-size: 60px;
-
     }
-
 
     .small-heading {
-
         margin-bottom: 15px;
-
     }
-
 
     .welcome-text {
-
-        margin:
-
-            15px
-
-            auto;
-
+        margin: 15px auto;
     }
 
-
     .letter {
+        max-height: 62vh;
+    }
 
-        max-height: 68vh;
+    .thank-flower {
+        font-size: 55px;
+    }
 
+    .thank-message {
+        margin-top: 25px;
     }
 
 }
@@ -1346,44 +903,33 @@ body {
 
 <body>
 
-<!-- ==========================================
-     AUDIO
+<!-- ===============================
+     BACKGROUND MUSIC
 
      FILE NAME: song.mp3
 
-     Upload song.mp3 to GitHub
-     in the same folder as index.html
-========================================== -->
+     Keep song.mp3 in same folder
+     as index.html
+================================ -->
 
 <audio id="bgMusic" loop>
-
-```
-<source
-    src="song.mp3"
-    type="audio/mpeg">
-```
-
+    <source src="song.mp3" type="audio/mpeg">
 </audio>
 
-<!-- FLOATING FLOWERS -->
+<!-- ===============================
+     FLOATING FLOWERS
+================================ -->
 
 <div class="flowers">
 
 ```
 <div class="flower">🌸</div>
-
 <div class="flower">🌺</div>
-
 <div class="flower">🌷</div>
-
 <div class="flower">✨</div>
-
 <div class="flower">🌸</div>
-
 <div class="flower">💮</div>
-
 <div class="flower">🌷</div>
-
 <div class="flower">✨</div>
 ```
 
@@ -1395,7 +941,7 @@ body {
 <!-- MUSIC STATUS -->
 
 <div
-    class="music"
+    class="music-status"
     id="musicStatus">
 
     🎵 Playing
@@ -1404,9 +950,9 @@ body {
 
 
 
-<!-- ==========================================
+<!-- ===============================
      PAGE 1
-=========================================== -->
+================================ -->
 
 <section
     class="screen active"
@@ -1414,23 +960,15 @@ body {
 
 
     <div class="circle one"></div>
-
     <div class="circle two"></div>
 
 
-    <div
-        class="butterfly left">
-
+    <div class="butterfly left">
         🦋
-
     </div>
 
-
-    <div
-        class="butterfly right">
-
+    <div class="butterfly right">
         🦋
-
     </div>
 
 
@@ -1474,12 +1012,12 @@ body {
             for the wonderful teachers
             who have guided us,
             inspired us and become
-            a part of our story.
+            a beautiful part of our story.
 
         </p>
 
 
-        <!-- CLICK = SONG START -->
+        <!-- START SONG -->
 
         <button
             class="start-button"
@@ -1495,12 +1033,9 @@ body {
 
     <div class="dots">
 
-        <div
-            class="dot active">
-        </div>
-
+        <div class="dot active"></div>
         <div class="dot"></div>
-
+        <div class="dot"></div>
         <div class="dot"></div>
 
     </div>
@@ -1510,9 +1045,9 @@ body {
 
 
 
-<!-- ==========================================
+<!-- ===============================
      PAGE 2
-=========================================== -->
+================================ -->
 
 <section
     class="screen"
@@ -1562,10 +1097,10 @@ body {
 
             <br><br>
 
-            But we will remember the teachers
-            who encouraged us when we struggled,
-            corrected us when we were wrong,
-            and believed we could do better.
+            But we will always remember
+            the teachers who encouraged us,
+            corrected us and believed
+            that we could do better.
 
         </p>
 
@@ -1575,7 +1110,7 @@ body {
 
     <button
         class="continue-button"
-        onclick="showFinalPage()">
+        onclick="goToPage3()">
 
         Continue ❤️
 
@@ -1585,11 +1120,8 @@ body {
     <div class="dots">
 
         <div class="dot"></div>
-
-        <div
-            class="dot active">
-        </div>
-
+        <div class="dot active"></div>
+        <div class="dot"></div>
         <div class="dot"></div>
 
     </div>
@@ -1599,9 +1131,9 @@ body {
 
 
 
-<!-- ==========================================
+<!-- ===============================
      PAGE 3
-=========================================== -->
+================================ -->
 
 <section
     class="screen"
@@ -1677,29 +1209,115 @@ body {
 
             <br>
 
-            And thank you for believing in us.
-
-            <br><br>
-
-            Happy Teachers' Day 🌸❤️
+            And thank you for believing in us. ❤️
 
         </p>
 
 
-        <p>
+    </div>
 
-            With Love, Respect
-            & Gratitude,
 
-            <br><br>
+    <!-- NEXT TO FINAL PAGE -->
 
-            <strong>
+    <button
+        class="continue-button"
+        onclick="goToThankYou()">
 
-                Your Students 🎓
+        One Last Thing ✨
 
-            </strong>
+    </button>
+
+
+    <div class="dots">
+
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot active"></div>
+        <div class="dot"></div>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ===============================
+     PAGE 4
+     FINAL THANK YOU
+================================ -->
+
+<section
+    class="screen"
+    id="screen4">
+
+
+    <div class="thank-content">
+
+
+        <div class="thank-flower">
+
+            🌸
+
+        </div>
+
+
+        <div class="thank-small">
+
+            WITH LOVE & GRATITUDE
+
+        </div>
+
+
+        <h1 class="thank-title">
+
+            THANK
+
+            <br>
+
+            <span>
+
+                YOU
+
+            </span>
+
+        </h1>
+
+
+        <p class="thank-message">
+
+            For every lesson.
+
+            <br>
+
+            For every correction.
+
+            <br>
+
+            For every moment you believed in us.
 
         </p>
+
+
+        <div class="heart">
+
+            ❤️
+
+        </div>
+
+
+        <div class="final-wish">
+
+            Happy Teachers' Day 🌸
+
+        </div>
+
+
+        <div class="final-sign">
+
+            — With Love, Your Students 🎓
+
+        </div>
 
 
     </div>
@@ -1708,12 +1326,9 @@ body {
     <div class="dots">
 
         <div class="dot"></div>
-
         <div class="dot"></div>
-
-        <div
-            class="dot active">
-        </div>
+        <div class="dot"></div>
+        <div class="dot active"></div>
 
     </div>
 
@@ -1723,17 +1338,16 @@ body {
 
 </div>
 
+<!-- ===============================
+     JAVASCRIPT
+================================ -->
+
 <script>
 
 
-/* ==========================================
-   START WEBSITE
-
-   SONG STARTS ONLY AFTER CLICK
-========================================== */
+/* START WEBSITE + SONG */
 
 function startWebsite() {
-
 
     const song =
 
@@ -1748,7 +1362,6 @@ function startWebsite() {
 
         .then(() => {
 
-
             document
 
                 .getElementById(
@@ -1759,30 +1372,21 @@ function startWebsite() {
 
                 .classList
 
-                .add(
-
-                    "show"
-
-                );
-
+                .add("show");
 
         })
 
-        .catch(
+        .catch(error => {
 
-            function(error) {
+            console.log(
 
-                console.log(
+                "Audio Error:",
 
-                    "Song could not play",
+                error
 
-                    error
+            );
 
-                );
-
-            }
-
-        );
+        });
 
 
     changeScreen(
@@ -1793,17 +1397,12 @@ function startWebsite() {
 
     );
 
-
 }
 
 
+/* PAGE 2 → PAGE 3 */
 
-/* ==========================================
-   GO TO FINAL PAGE
-========================================== */
-
-function showFinalPage() {
-
+function goToPage3() {
 
     changeScreen(
 
@@ -1813,14 +1412,25 @@ function showFinalPage() {
 
     );
 
+}
+
+
+/* PAGE 3 → THANK YOU */
+
+function goToThankYou() {
+
+    changeScreen(
+
+        "screen3",
+
+        "screen4"
+
+    );
 
 }
 
 
-
-/* ==========================================
-   SCREEN CHANGE FUNCTION
-========================================== */
+/* SCREEN CHANGE */
 
 function changeScreen(
 
@@ -1830,52 +1440,26 @@ function changeScreen(
 
 ) {
 
-
     document
 
-        .getElementById(
-
-            current
-
-        )
+        .getElementById(current)
 
         .classList
 
-        .remove(
-
-            "active"
-
-        );
+        .remove("active");
 
 
-    setTimeout(
+    setTimeout(() => {
 
-        function() {
+        document
 
+            .getElementById(next)
 
-            document
+            .classList
 
-                .getElementById(
+            .add("active");
 
-                    next
-
-                )
-
-                .classList
-
-                .add(
-
-                    "active"
-
-                );
-
-
-        },
-
-        150
-
-    );
-
+    }, 150);
 
 }
 
@@ -1883,5 +1467,4 @@ function changeScreen(
 </script>
 
 </body>
-
 </html>
